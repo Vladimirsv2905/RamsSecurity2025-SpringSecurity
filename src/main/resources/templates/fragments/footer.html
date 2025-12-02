@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer th:fragment="footer" class="site-footer" style="
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 100%);
+    color: #fff;
+    padding: 50px 0 20px;
+    border-top: 1px solid rgba(231, 76, 60, 0.3);
+">
+    <div class="container">
+        <div class="row">
+            <!-- Колонка 1: О компании -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="footer-logo mb-3" style="font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 700;">
+                    <span style="color: #e74c3c;">РАМС</span>БЕЗОПАСНОСТЬ
+                </div>
+                <p style="color: rgba(255,255,255,0.7); line-height: 1.6;">
+                    Профессиональный монтаж и обслуживание систем безопасности с 2003 года. </p>
+                <div class="social-icons mt-4">
+                    <a href="#" class="text-white mr-3" style="font-size: 1.2rem;"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="text-white mr-3" style="font-size: 1.2rem;"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="text-white mr-3" style="font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Колонка 2: Навигация -->
+            <div class="col-md-2 mb-4 mb-md-0">
+                <h5 class="footer-heading" style="
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 20px;
+                    position: relative;
+                    padding-bottom: 10px;
+                ">
+                    <span style="
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 40px;
+                        height: 2px;
+                        background: #e74c3c;
+                    "></span>
+                    Навигация
+                </h5>
+                <ul class="footer-links" style="list-style: none; padding-left: 0;">
+                    <li class="mb-2"><a href="/" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Главная</a></li>
+                    <li class="mb-2"><a href="/services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Услуги</a></li>
+<!--                    <li class="mb-2"><a href="#" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Объекты</a></li>-->
+                    <li class="mb-2"><a href="/about" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">О нас</a></li>
+                    <li><a href="/contacts" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Контакты</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонка 3: Услуги -->
+            <div class="col-md-3 mb-4 mb-md-0">
+                <h5 class="footer-heading" style="
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 20px;
+                    position: relative;
+                    padding-bottom: 10px;
+                ">
+                    <span style="
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 40px;
+                        height: 2px;
+                        background: #e74c3c;
+                    "></span>
+                    Услуги
+                </h5>
+                <ul class="footer-links" style="list-style: none; padding-left: 0;">
+                    <li class="mb-2"><i class="fas fa-check mr-2" style="color: #e74c3c; font-size: 0.8rem;"></i><a href="/services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Пожарная сигнализация</a></li>
+                    <li class="mb-2"><i class="fas fa-check mr-2" style="color: #e74c3c; font-size: 0.8rem;"></i><a href="/services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Видеонаблюдение</a></li>
+                    <li class="mb-2"><i class="fas fa-check mr-2" style="color: #e74c3c; font-size: 0.8rem;"></i><a href="/services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">СКУД</a></li>
+                    <li class="mb-2"><i class="fas fa-check mr-2" style="color: #e74c3c; font-size: 0.8rem;"></i><a href="/services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Оповещение</a></li>
+                    <li><i class="fas fa-check mr-2" style="color: #e74c3c; font-size: 0.8rem;"></i><a href="/services" style="color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;">Проектирование</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонка 4: Контакты -->
+            <div class="col-md-3">
+                <h5 class="footer-heading" style="
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 20px;
+                    position: relative;
+                    padding-bottom: 10px;
+                ">
+                    <span style="
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 40px;
+                        height: 2px;
+                        background: #e74c3c;
+                    "></span>
+                    Контакты
+                </h5>
+                <ul class="footer-contacts" style="list-style: none; padding-left: 0;">
+                    <li class="mb-3" style="display: flex; align-items: center;">
+                        <i class="fas fa-map-marker-alt mr-3" style="color: #e74c3c;"></i>
+                        <span style="color: rgba(255,255,255,0.7);">г. Новомосковск, ул. Комсомольская, 45</span>
+                    </li>
+                    <li class="mb-3" style="display: flex; align-items: center;">
+                        <i class="fas fa-phone-alt mr-3" style="color: #e74c3c;"></i>
+                        <a href="tel:+74951234567" style="color: rgba(255,255,255,0.7); text-decoration: none;">+7 (487) 627-33-21</a>
+                    </li>
+                    <li class="mb-3" style="display: flex; align-items: center;">
+                        <i class="fas fa-envelope mr-3" style="color: #e74c3c;"></i>
+                        <a href="mailto:info@ramsecurity.ru" style="color: rgba(255,255,255,0.7); text-decoration: none;">pogar2005@yandex.ru</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Нижняя часть футера -->
+        <div class="footer-bottom mt-5 pt-4" style="
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        ">
+            <div class="mb-3">
+                <a href="#" class="text-white mx-2" style="font-size: 0.9rem;">Политика конфиденциальности</a>
+                <a href="#" class="text-white mx-2" style="font-size: 0.9rem;">Договор оферты</a>
+                <a href="#" class="text-white mx-2" style="font-size: 0.9rem;">Лицензии</a>
+            </div>
+            <p class="copyright" style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin: 0;">
+                © 2025 RAMS. Все права защищены.
+            </p>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>

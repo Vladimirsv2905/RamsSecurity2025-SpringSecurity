@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | ООО "РАМС" - системы пожарной безопасности</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/contacts.css">
+</head>
+<body>
+<div th:fragment="content">
+
+  <!-- Герой-секция -->
+<!--  <section class="contacts1-hero">-->
+<!--    <div class="container">-->
+<!--      <h1 class="contacts1-title">Контакты</h1>-->
+<!--      <p class="contacts1-subtitle">Свяжитесь с нами для консультации и расчета стоимости услуг</p>-->
+<!--    </div>-->
+<!--  </section>-->
+    <section class="feedback-section">
+        <div class="container" style="padding-top: 20px">
+            <h2 class="section-title1">Оставить заявку</h2>
+            <div class="accent-line4"></div>
+
+            <!-- Сообщения -->
+            <div th:if="${successMessage}" class="alert alert-success">
+                <i class="fas fa-check-circle"></i>
+                <span th:text="${successMessage}"></span>
+            </div>
+
+            <div th:if="${errorMessage}" class="alert alert-error">
+                <i class="fas fa-exclamation-circle"></i>
+                <span th:text="${errorMessage}"></span>
+            </div>
+
+            <form th:action="@{/send-contact}" th:object="${contactRequest}" method="post">
+                <div class="form-group">
+                    <input type="text" th:field="*{name}" placeholder="Ваше имя" required>
+                    <i class="fas fa-user"></i>
+                    <div th:if="${#fields.hasErrors('name')}" class="error-message">
+                        <span th:errors="*{name}"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" th:field="*{phone}" placeholder="Ваш телефон" required>
+                    <i class="fas fa-phone"></i>
+                    <div th:if="${#fields.hasErrors('phone')}" class="error-message">
+                        <span th:errors="*{phone}"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" th:field="*{email}" placeholder="Ваш email (необязательно)">
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <div class="form-group">
+                    <textarea th:field="*{message}" placeholder="Ваш вопрос или описание объекта" rows="4" required></textarea>
+                    <i class="fas fa-comment"></i>
+                    <div th:if="${#fields.hasErrors('message')}" class="error-message">
+                        <span th:errors="*{message}"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-danger btn-lg" style="
+                padding: 12px 30px;
+                font-weight: 700;
+                margin: 0 10px;
+                display: inline-block;
+            ">
+                    <i class="fas fa-phone-alt mr-2"></i> Отправить заявку
+                </button>
+                <a th:href="@{'https://wa.me/79065350246?text=' + ${#strings.replace(#strings.replace(contactRequest.toString(), ' ', '%20'), '
+', '%0A')}}"
+                   class="btn btn-success btn-lg"
+                   style="padding: 12px 30px; font-weight: 700; margin: 0 10px; display: inline-block;"
+                   target="_blank">
+                    <i class="fab fa-whatsapp mr-2"></i> Отправить в WhatsApp
+                </a>
+            </form>
+        </div>
+    </section>
+
+
+  <!-- Основной контент -->
+  <section class="contacts-content py-5">
+
+    <div class="container1" style="padding: 80px">
+      <h2 class="section-title1">Наши контакты</h2>
+      <div class="accent-line4"></div>
+      <div class="service-block">
+        <div class="side-contacts">
+
+
+                      <div class="contact1-details">
+                        <h3>Адрес</h3>
+                        <p>г. Новомосковск, ул. Комсомольская, д. 45<br>Вход со двора</p>
+                      </div>
+
+        </div>
+        <div class="side-contacts">
+
+            <div class="contact1-details">
+              <h3>Режим работы</h3>
+              <p>Пн-Пт: 9:00 - 17:00</p>
+              <p>Сб: выходной</p>
+              <p>Вс: выходной</p>
+            </div>
+
+
+        </div>
+      </div>
+      <div class="service-block">
+        <div class="side-contacts">
+          <div class="contact1-details">
+                          <h3>Email</h3>
+                          <p>pogar2005@yandex.ru</p>
+
+                        </div>
+        </div>
+        <div class="side-contacts">
+          <div class="contact1-details">
+            <h3>Телефон</h3>
+            <p>+7 (48762) 7-33-21</p>
+
+          </div>
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+  </section>
+
+  <!-- Карта -->
+  <section class="map-section">
+    <div class="container" style="text-align: center">
+      <h2 class="section-title1">Как нас найти</h2>
+      <div class="accent-line2 mx-auto"></div>
+
+      <div class="map-container" >
+<!--        <div class="map-placeholder">-->
+<!--          <i class="fas fa-map-marked-alt"></i>-->
+<!--          <p>Здесь будет карта</p>-->
+<!--          <small>г. Тула, ул. Примерная, д. 123</small>-->
+<!--        </div>-->
+        <!-- Для реальной карты можно использовать:
+             <iframe src="https://yandex.ru/map-widget/v1/?um=..." -->
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A91926021e3c3a244c14feacf910e3c1189c91bc2d5341ddf7f75b6e4c7446e92&amp;source=constructor" width="700" height="400" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+    <!-- Форма обратной связи -->
+
+
+    <section>
+
+<!--        <h1>Свяжитесь с нами</h1>-->
+
+<!--        &lt;!&ndash; Сообщение об успехе &ndash;&gt;-->
+<!--        <div th:if="${success}" class="success" th:text="${success}"></div>-->
+
+<!--        <form th:action="@{/contact}" method="post">-->
+<!--            <div class="form-group">-->
+<!--                <label>Имя:*</label>-->
+<!--                <input type="text" name="name" required>-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--                <label>Телефон:*</label>-->
+<!--                <input type="tel" name="phone" required>-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--                <label>Email:</label>-->
+<!--                <input type="email" name="email">-->
+<!--            </div>-->
+
+<!--            <div class="form-group">-->
+<!--                <label>Сообщение:*</label>-->
+<!--                <textarea name="message" rows="5" required></textarea>-->
+<!--            </div>-->
+
+<!--            <button type="submit">📨 Отправить заявку</button>-->
+<!--        </form>-->
+
+        <script>
+            // Быстрая валидация на клиенте
+            document.querySelector('form').addEventListener('submit', function(e) {
+                if (!this.checkValidity()) {
+                    e.preventDefault();
+                    alert('Заполните все обязательные поля!');
+                }
+            });
+        </script>
+    </section>
+
+</div>
+<script src="/js/contacts.js"></script>
+</body>
+</html>

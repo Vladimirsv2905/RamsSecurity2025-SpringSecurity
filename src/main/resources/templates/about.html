@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О компании | ООО "РАМС" - системы пожарной безопасности</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div th:fragment="content">
+  <section class="about-hero3">
+    <div class="container3">
+      <h1>О компании ООО "РАМС"</h1>
+      <p>20 лет опыта в обеспечении пожарной безопасности объектов любой сложности</p>
+      <a href="/contacts" class="btn btn-danger btn-lg" style="
+                padding: 12px 30px;
+                font-weight: 700;
+                margin: 0 10px;
+            ">
+        <i class="fas fa-phone-alt mr-2"></i> Связаться с нами
+      </a>
+    </div>
+  </section>
+
+  <!-- О компании -->
+  <section class="container3 py-53">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title33">Наша история</h2>
+        <div class="accent-line33"></div>
+        <p>Компания ООО "РАМС" была основана в 2003 году с целью предоставления профессиональных услуг в области пожарной безопасности. Начиная с небольших объектов, мы постепенно расширяли свою деятельность и сегодня обслуживаем более 1000 объектов по всей Тульской области.</p>
+        <p>За годы работы мы накопили уникальный опыт, сформировали команду высококвалифицированных специалистов и заслужили доверие клиентов из различных сфер бизнеса.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="/images/def.jpg" alt="История" class="image-history">
+<!--        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Наш офис" class="img-fluid rounded">-->
+      </div>
+    </div>
+  </section>
+
+  <!-- Миссия и ценности -->
+  <section class="container3 py-53">
+    <div class="mission-section3">
+      <h2 class="section-title33">Наша миссия</h2>
+      <div class="accent-line33"></div>
+      <p>Обеспечивать безопасность людей и сохранность имущества наших клиентов через внедрение современных систем пожарной безопасности, основанных на глубоком анализе рисков и индивидуальном подходе к каждому объекту.</p>
+    </div>
+
+    <h2 class="section-title33 text-center">Наши ценности</h2>
+    <div class="accent-line23 mx-auto"></div>
+
+    <div class="values-grid3">
+      <div class="value-card3">
+        <div class="value-icon3">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Безопасность</h3>
+        <p>Главный приоритет в нашей работе - обеспечение максимального уровня безопасности для клиентов.</p>
+      </div>
+      <div class="value-card3">
+        <div class="value-icon3">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>Мастерство</h3>
+        <p>Все наши специалисты регулярно проходят обучение и сертификацию.</p>
+      </div>
+      <div class="value-card3">
+        <div class="value-icon3">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Надежность</h3>
+        <p>Мы выполняем взятые обязательства и гарантируем качество наших услуг.</p>
+      </div>
+      <div class="value-card3">
+        <div class="value-icon3">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Инновации</h3>
+        <p>Постоянно внедряем новые технологии и современные решения.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Команда -->
+<!--  <section class="container3 team-section3">-->
+<!--    <h2 class="section-title33 text-center">Наша команда</h2>-->
+<!--    <div class="accent-line23 mx-auto"></div>-->
+<!--    <p class="text-center mb-5">Профессионалы с многолетним опытом работы в сфере пожарной безопасности</p>-->
+
+<!--    <div class="team-grid3">-->
+<!--      <div class="team-card3">-->
+<!--        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Директор" class="team-img3">-->
+<!--        <div class="team-info3">-->
+<!--          <h4>Иванов Сергей</h4>-->
+<!--          <p class="text-danger">Генеральный директор</p>-->
+<!--          <p>20 лет в сфере пожарной безопасности, эксперт по системам пожаротушения.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="team-card3">-->
+<!--        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Технический директор" class="team-img3">-->
+<!--        <div class="team-info3">-->
+<!--          <h4>Петрова Анна</h4>-->
+<!--          <p class="text-danger">Технический директор</p>-->
+<!--          <p>Специалист по проектированию систем безопасности, инженер с 15-летним стажем.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="team-card3">-->
+<!--        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Монтажник" class="team-img3">-->
+<!--        <div class="team-info3">-->
+<!--          <h4>Сидоров Алексей</h4>-->
+<!--          <p class="text-danger">Главный монтажник</p>-->
+<!--          <p>Опыт работы более 10 лет, выполнял монтаж на сложных промышленных объектах.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="team-card3">-->
+<!--        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Инженер" class="team-img3">-->
+<!--        <div class="team-info3">-->
+<!--          <h4>Кузнецов Дмитрий</h4>-->
+<!--          <p class="text-danger">Ведущий инженер</p>-->
+<!--          <p>Специалист по системам видеонаблюдения и контроля доступа.</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+  <section class="container licenses-section">
+    <h2 class="section-title33">Наша лицензия</h2>
+    <div class="accent-line2 mx-auto"></div>
+    <p class="licenses-subtitle">Официальные документы, подтверждающие нашу компетенцию в области пожарной безопасности</p>
+
+    <div class="licenses-grid">
+      <!-- Лицензия 1 -->
+      <div class="license-item" onclick="openLicenseModal('license1')">
+        <img src="/images/licenci-rams.jpg"
+             alt="Лицензия МЧС"
+             class="license-img">
+<!--        <p class="license-caption">Лицензия МЧС</p>-->
+      </div>
+
+      <!-- Лицензия 2 -->
+      <div class="license-item" onclick="openLicenseModal('license2')">
+        <img src="/images/licenci-rams2.jpg"
+             alt="Сертификат соответствия"
+             class="license-img">
+<!--        <p class="license-caption">Сертификат соответствия</p>-->
+      </div>
+    </div>
+  </section>
+
+  <!-- Модальное окно -->
+  <div id="licenseModal" class="license-modal" onclick="closeLicenseModal()">
+    <span class="license-modal-close">&times;</span>
+    <img class="license-modal-content" id="modalImage" src="" alt="Увеличенное изображение лицензии">
+  </div>
+
+  <!-- JavaScript для работы модального окна -->
+  <script>
+    function openLicenseModal(licenseId) {
+      const modal = document.getElementById('licenseModal');
+      const modalImg = document.getElementById('modalImage');
+
+      // Получаем ссылку на изображение из элемента
+      const licenseImg = document.querySelector(`[onclick="openLicenseModal('${licenseId}')"] img`);
+      modalImg.src = licenseImg.src;
+      modalImg.alt = licenseImg.alt;
+
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Блокируем скролл
+    }
+
+    function closeLicenseModal() {
+      const modal = document.getElementById('licenseModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Разблокируем скролл
+    }
+
+    // Закрытие по клику вне изображения
+    document.getElementById('licenseModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLicenseModal();
+      }
+    });
+
+    // Закрытие по ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLicenseModal();
+      }
+    });
+  </script>
+  <!-- Сертификаты -->
+<!--  <section class="container3 certificates-section3">-->
+<!--    <h2 class="section-title33 text-center">Наши сертификаты</h2>-->
+<!--    <div class="accent-line23 mx-auto"></div>-->
+<!--    <p class="text-center mb-5">Все работы выполняются в соответствии с требованиями законодательства и нормативных документов</p>-->
+
+<!--    <div class="certificates-slider3">-->
+<!--      <div class="certificate-item3">-->
+<!--        <img src="/images/licenci-rams.jpg" alt="Сертификат МЧС" class="certificate-img3">-->
+<!--        <p class="mt-3">Лицензия МЧС</p>-->
+<!--      </div>-->
+<!--      <div class="certificate-item3">-->
+<!--        <div class="zoom-container" onclick="this.classList.toggle('zoomed')">-->
+<!--          <img src="/images/licenci-rams2.jpg" alt="Описание" class="zoom-image">-->
+<!--        </div><p class="mt-3">Сертификат ISO 9001</p>-->
+<!--      </div>-->
+<!--&lt;!&ndash;      <div class="certificate-item3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="https://via.placeholder.com/200x280/ffffff/000000?text=СРО" alt="СРО" class="certificate-img3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p class="mt-3">Допуск СРО</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="certificate-item3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="https://via.placeholder.com/200x280/ffffff/000000?text=Обучение" alt="Обучение" class="certificate-img3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p class="mt-3">Сертификат обучения</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="certificate-item3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <img src="https://via.placeholder.com/200x280/ffffff/000000?text=Партнерство" alt="Партнерство" class="certificate-img3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p class="mt-3">Партнерский сертификат</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </section>-->
+
+  <!-- История компании -->
+  <section class="container3 history-timeline3">
+    <h2 class="section-title33 text-center">История компании</h2>
+    <div class="accent-line23 mx-auto">
+
+    </div>
+
+    <div class="timeline-item3">
+      <div class="timeline-dot3"></div>
+      <div class="timeline-year3">2003</div>
+      <div class="timeline-content3">
+        <h4>Основание компании</h4>
+        <p>ООО "РАМС" начало свою деятельность с монтажа пожарной сигнализации на небольших коммерческих объектах.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item3">
+      <div class="timeline-dot3"></div>
+      <div class="timeline-year3">2008</div>
+      <div class="timeline-content3">
+        <h4>Первая лицензия МЧС</h4>
+        <p>Получена лицензия МЧС на осуществление деятельности в области пожарной безопасности.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item3">
+      <div class="timeline-dot3"></div>
+      <div class="timeline-year3">2012</div>
+      <div class="timeline-content3">
+        <h4>Расширение спектра услуг</h4>
+        <p>Добавлены услуги по проектированию систем безопасности и монтажу видеонаблюдения.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item3">
+      <div class="timeline-dot3"></div>
+      <div class="timeline-year3">2016</div>
+      <div class="timeline-content3">
+        <h4>500+ объектов</h4>
+        <p>Компания достигла отметки в 500 обслуживаемых объектов в Тульской области.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item3">
+      <div class="timeline-dot3"></div>
+      <div class="timeline-year3">2020</div>
+      <div class="timeline-content3">
+        <h4>Современные технологии</h4>
+        <p>Внедрение облачных решений и систем аналитики для мониторинга безопасности.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item3">
+      <div class="timeline-dot3"></div>
+      <div class="timeline-year3">2023</div>
+      <div class="timeline-content3">
+        <h4>1000+ объектов</h4>
+        <p>Преодолен рубеж в 1000 обслуживаемых объектов. Расширение географии обслуживания.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA секция -->
+  <section class="container3 py-53 text-center">
+    <h2 class="section-title33">Готовы обсудить ваш проект?</h2>
+    <div class="accent-line23 mx-auto"></div>
+<!--    <p class="mb-4">Оставьте заявку и наш специалист свяжется с вами для консультации</p>-->
+    <a href="/contacts" class="btn btn-danger btn-lg" style="
+                padding: 12px 30px;
+                font-weight: 700;
+                margin: 10px 10px 30px 10px;
+            ">
+      <i class="fas fa-envelope mr-2"></i> Связаться с нами
+    </a>
+  </section>
+</div>
+</body>
+</html>
