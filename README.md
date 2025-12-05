@@ -51,7 +51,7 @@
 - **Git** (контроль версий)
 - **IntelliJ IDEA** (среда разработки)
 
-## 🏗 Архитектура проекта
+### 🏗 Архитектура проекта
 src/main/java/com/ramssecurity/
 ├── config/
 │ └── SecurityConfig.java # Конфигурация Spring Security
@@ -68,7 +68,7 @@ src/main/java/com/ramssecurity/
 │ └── UserService.java # Сервисный слой для бизнес-логики
 └── RamsSecurity2025Application.java # Главный класс приложения
 
-text
+
 
 ## 🚀 Запуск проекта
 
@@ -94,7 +94,7 @@ GRANT ALL PRIVILEGES ON DATABASE rams_security TO rams_user;
 3. Настройка конфигурации
 Создайте файл src/main/resources/application.properties или отредактируйте существующий:
 
-properties
+
 # База данных
 spring.datasource.url=jdbc:postgresql://localhost:5432/rams_security
 spring.datasource.username=rams_user
