@@ -51,24 +51,6 @@
 - **Git** (контроль версий)
 - **IntelliJ IDEA** (среда разработки)
 
-### 🏗 Архитектура проекта
-src/main/java/com/ramssecurity/
-├── config/
-│ └── SecurityConfig.java # Конфигурация Spring Security
-├── controller/
-│ ├── MainController.java # Основной контроллер
-│ └── UserController.java # Контроллер для работы с пользователями
-├── model/
-│ ├── User.java # Сущность пользователя
-│ └── Role.java # Сущность роли
-├── repository/
-│ ├── UserRepository.java # Репозиторий для User
-│ └── RoleRepository.java # Репозиторий для Role
-├── service/
-│ └── UserService.java # Сервисный слой для бизнес-логики
-└── RamsSecurity2025Application.java # Главный класс приложения
-
-
 
 ## 🚀 Запуск проекта
 
@@ -87,7 +69,7 @@ cd RamsSecurity2025-SpringSecurity
 2. Настройка базы данных
 Создайте базу данных в PostgreSQL:
 
-sql
+
 CREATE DATABASE rams_security;
 CREATE USER rams_user WITH PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE rams_security TO rams_user;
@@ -113,7 +95,6 @@ spring.security.user.roles=ADMIN
 # Server
 server.port=8080
 4. Сборка и запуск
-bash
 # Сборка проекта
 mvn clean package
 
